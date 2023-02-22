@@ -1,0 +1,108 @@
+.footer {
+  position: relative;
+  margin-top: auto;
+  padding: 50px 0 80px;
+  background-color: $default;
+  color: $white;
+
+  @include adpt ($mtab-r) {
+    padding: 50px 0;
+  }
+
+  @include adpt ($stab-r) {
+    padding: 50px 0 30px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo-inner {
+    flex: 1;
+    margin-top: -20px;
+
+    @include adpt ($stab-r) {
+      order: 1;
+    }
+  }
+
+  &__menu-inner {
+    flex: 2;
+    padding: 0 20px;
+
+    @include adpt ($mtab-r) {
+      flex: 1;
+    }
+
+    @include adpt ($stab-r) {
+      padding: 0;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  &__contact-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__copyright {
+    font-size: 12px;
+    line-height: 1.67;
+    opacity: 0.8;
+
+    @include adpt ($stab-r) {
+      text-align: center;
+    }
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+
+      @include adpt ($stab-r) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__menu-link {
+    padding: 5px 0;
+    transition: opacity 0.3s;
+
+
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__tel {
+    transition: opacity 0.3s;
+
+    @include adpt ($stab-r) {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__social {
+    margin-bottom: 35px;
+
+    @include adpt ($stab-r) {
+      margin-bottom: 45px;
+    }
+  }
+}

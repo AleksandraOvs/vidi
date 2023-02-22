@@ -1,0 +1,28 @@
+.list-decor {
+  &__item {
+    padding-left: 34px;
+    position: relative;
+
+    @include adpt ($bmob-r) {
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      background-image: url('../images/icon/point.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 10px;
+      height: 13px;
+    }
+  }
+}

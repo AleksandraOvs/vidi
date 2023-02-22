@@ -1,0 +1,137 @@
+.types {
+  &__title {
+    margin-bottom: 60px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 40px;
+
+    @include adpt ($tab-r) {
+      grid-gap: 10px 20px;
+    }
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include adpt ($bmob-r) {
+      display: block;
+    }
+  }
+
+  &__item-wrap {
+    @include adpt ($bmob-r) {
+      padding: 50px 0 15px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 60px;
+    background: #F4DB7E;
+    box-shadow: 4px 4px 11px rgba(85, 85, 85, 0.21);
+    border-radius: 4px;
+    padding: 25px 20px;
+    height: calc(100% - 60px);
+
+    @include adpt ($tab-r) {
+      padding: 25px 15px;
+    }
+
+    @include adpt ($bmob-r) {
+      margin: 0 10px;
+    }
+
+    &:hover {
+      & .types__img {
+        opacity: 0;
+      }
+
+      & .types__img_gif {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 243px;
+    height: 175px;
+    margin: -85px auto 25px;
+
+    @include adpt ($tab-r) {
+      max-width: 188px;
+      height: 135px;
+      margin-top: -75px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    &_gif {
+      z-index: 2;
+      opacity: 0;
+    }
+  }
+
+
+  &__subtitle {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: $white;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    line-height: 1.11;
+    text-transform: uppercase;
+    color: $default;
+  }
+
+  & .slick-list {
+    margin: 0 -10px;
+  }
+
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    font-size: 0;
+
+    & li {
+      &.slick-active {
+        & button {
+          background-color: $accent;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    & button {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $default;
+      transition: background-color 0.3s;
+    }
+  }
+}

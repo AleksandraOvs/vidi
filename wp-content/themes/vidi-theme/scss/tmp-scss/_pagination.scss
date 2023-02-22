@@ -1,0 +1,35 @@
+.pagination {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+    &._active{
+      & a{
+        background-color: $accent;
+      }
+    }
+    &:hover{
+      &:not(._arrow){
+        & a{
+          background-color: $accent;
+        }
+      }
+    }
+  
+
+    & a {
+      padding: 3px 9px;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      line-height: 19px; 
+    }
+  }
+}

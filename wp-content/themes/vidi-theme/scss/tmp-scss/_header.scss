@@ -1,0 +1,86 @@
+.header {
+  padding: 20px 0;
+  background: rgba(209, 209, 209, 0.6);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @include adpt ($bmob-r) {
+      max-width: 120px;
+    }
+  }
+
+  &__tel {
+    padding: 5px 25px;
+
+    @include adpt ($mtab-r) {
+      background-color: transparent;
+      padding: 5px;
+      border: none;
+      box-shadow: none;
+    }
+
+    &:active {
+      & path {
+        fill: $white;
+      }
+    }
+
+    & span {
+      @include adpt ($mtab-r) {
+        display: none;
+      }
+    }
+  }
+
+  &__tel-icon {
+    margin-left: 20px;
+    object-fit: contain;
+
+    @include adpt ($mtab-r) {
+      margin-left: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    & path {
+      transition: fill 0.3s;
+
+      @include adpt ($mtab-r) {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__right {
+    @include adpt ($mtab-r) {
+      position: relative;
+      padding-right: 55px;
+    }
+  }
+
+  &__burger {
+    @include adpt ($mtab-r) {
+      z-index: 12;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+    }
+
+  }
+
+  &__menu-wrapper {
+    @include adpt ($mtab-r) {
+      overflow-y: auto;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

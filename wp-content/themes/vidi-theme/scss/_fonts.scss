@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Inter-Black.woff2') format('woff2'),
+    url('../fonts/Inter-Black.woff') format('woff'),
+    url('../fonts/Inter-Black.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Comfortaa-Bold.woff2') format('woff2'),
+    url('../fonts/Comfortaa-Bold.woff') format('woff'),
+    url('../fonts/Comfortaa-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Comfortaa-Medium.woff2') format('woff2'),
+    url('../fonts/Comfortaa-Medium.woff') format('woff'),
+    url('../fonts/Comfortaa-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Comfortaa-Regular.woff2') format('woff2'),
+    url('../fonts/Comfortaa-Regular.woff') format('woff'),
+    url('../fonts/Comfortaa-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Oswald-SemiBold.woff2') format('woff2'),
+    url('../fonts/Oswald-SemiBold.woff') format('woff'),
+    url('../fonts/Oswald-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Oswald-Medium.woff2') format('woff2'),
+    url('../fonts/Oswald-Medium.woff') format('woff'),
+    url('../fonts/Oswald-Medium.ttf') format('ttf');
+}

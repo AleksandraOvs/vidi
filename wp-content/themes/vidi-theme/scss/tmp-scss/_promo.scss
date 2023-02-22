@@ -1,0 +1,120 @@
+.promo {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 120px;
+
+  @include adpt ($tab-r) {
+    margin-bottom: 100px;
+  }
+
+  @include adpt ($stab-r) {
+    margin-bottom: 60px;
+  }
+
+  &__video {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include adpt ($bmob-r) {}
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 70px 40px 0;
+    border-radius: 0px 20px 20px 0px;
+    max-width: 510px;
+    margin-right: 50px;
+    flex: 1;
+    flex-shrink: 0;
+
+    @include adpt ($stab-r) {
+      max-width: 420px;
+      padding: 40px 20px 56px 0;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+
+    @include adpt ($bmob-r) {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+
+    &::after {
+      // content: "";
+      // position: absolute;
+      // z-index: -1;
+      // top: 0;
+      // right: 0;
+      // width: 2000px;
+      // height: 100%;
+      // background: rgba(209, 209, 209, 0.6);
+      // backdrop-filter: blur(2px);
+      // border-radius: 0px 20px 20px 0px;
+    }
+  }
+
+  &__video-wrap {
+    flex: 1;
+    max-width: 650px;
+
+    @include adpt ($stab-r) {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+
+  &__title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 1.09;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @include adpt ($tab-r) {
+      font-size: 30px;
+    }
+
+    @include adpt ($stab-r) {
+      font-size: 26px;
+    }
+
+    @include adpt ($bmob-r) {
+      //color: $accent;
+      font-size: 25px;
+      //margin-bottom: 30px;
+      //text-transform: none;
+    }
+  }
+
+  &__list {
+    margin-bottom: 35px;
+  }
+
+  &__btn {
+    min-width: 290px;
+
+    @include adpt ($bmob-r) {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+.portfolio {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+
+    @include adpt ($tab-r) {
+      grid-gap: 20px;
+    }
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include adpt ($bmob-r) {
+      display: block;
+    }
+  }
+
+  &__img-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  &__link {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+
+    @include adpt ($tab-r) {
+      min-height: 220px;
+    }
+    @include adpt ($bmob-r) {
+      min-height: 200px;
+      margin: 0 10px;
+    }
+
+    &:hover {
+      &::after {
+        background-color: rgba(157, 169, 241, 0.4);
+      }
+
+      & .portfolio__video {
+        opacity: 1;
+        transform: scale(1.03);
+      }
+
+      & .portfolio__play {
+        transform: translate(-50%, -50%) scale(1.15);
+      }
+    }
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      transition: background-color 0.3s;
+      background-color: rgba(157, 169, 241, 0.9);
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+    @include adpt ($bmob-r) {
+      padding: 15px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+
+    @include adpt ($tab-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+
+    @include adpt ($bmob-r) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__play-img {
+    object-fit: contain;
+  }
+  & .slick-list {
+    margin: 0 -10px;
+  }
+
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    font-size: 0;
+
+    & li {
+      &.slick-active {
+        & button {
+          background-color: $accent;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    & button {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $default;
+      transition: background-color 0.3s;
+    }
+  }
+}

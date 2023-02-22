@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Oswald";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Oswald-Medium.woff2") format("woff2"), url("../fonts/Oswald-Medium.woff") format("woff"), url("../fonts/Oswald-Medium.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Oswald-SemiBold.woff2") format("woff2"), url("../fonts/Oswald-SemiBold.woff") format("woff"), url("../fonts/Oswald-SemiBold.ttf") format("ttf");
+}
+.edit-post-text-editor .editor-post-title {
+    max-width: none;
+    line-height: 1.4;
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    border: none;
+    padding: 16px;
+    text-align: center;
+}
+.edit-post-text-editor__body textarea.editor-post-text-editor {
+    display: none;
+}
+
+.edit-post-meta-boxes-area #poststuff h2.hndle, .edit-post-meta-boxes-area #poststuff h3.hndle {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.postbox-header .hndle {
+    justify-content: center;
+}
+
+.edit-post-header{
+    background: #FE6A3C;
+}
+.edit-post-header .edit-post-header__settings .components-button{
+}
+.edit-post-header .edit-post-header__settings .editor-post-publish-button{
+    background:#313131;
+}
+
+.edit-post-header .edit-post-header__settings .components-button.is-primary[aria-disabled=true]{
+    opacity: .5;
+    background:#313131;
+    border-color: #313131;
+}
+
+.edit-post-header-toolbar .edit-post-header-toolbar__left>.edit-post-header-toolbar__inserter-toggle.has-icon{
+    background:#313131;
+}
+
+
+.edit-post-header > .components-button .is-tertiary{
+    color:#fff;
+}
+
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+    color: #313131;
+    border-color: #313131;
+    background: #f6f7f7;
+    vertical-align: top;
+}
+
+.wrap .add-new-h2, .wrap .add-new-h2:active, .wrap .page-title-action, .wrap .page-title-action:active {
+    margin-left: 4px;
+    padding: 4px 8px;
+    position: relative;
+    top: -3px;
+    text-decoration: none;
+    border: 1px solid #313131;
+    border-radius: 2px;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: normal;
+    color: #fff;
+    background: #313131;
+    cursor: pointer;
+}
+
+.wrap h1.wp-heading-inline {
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+.row-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.components-button.is-secondary {
+    white-space: nowrap;
+    color: #313131;
+    background: transparent;
+}
+
+.components-button.is-tertiary {
+    white-space: nowrap;
+    color: #313131;
+    border:1px solid #313131;
+    background: transparent;
+}
+
+.edit-post-meta-boxes-area .postbox-header {
+    border-top: none;
+    background: #18223D;
+    padding: 20px 0;
+    color: #fff;
+    border-bottom: 0;
+}
+
+.cf-field__head {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    /* margin-bottom: 20px; */
+    text-align: center;
+    background: #efefef;
+    flex: 1 1 100%;
+}
+
+.cf-field__body, .cf-field__head {
+    margin-top: 20px;
+}
+
+.cf-complex .cf-field__head {
+    background: rgba(0,0,0,.3);
+    font-size: 20px;
+}
+
+.cf-complex__group-body .cf-field--has-width .cf-field__head {
+    background: rgba(0,0,0,.1);
+    text-align: left;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.cf-complex__group-body .cf-field--has-width .cf-field__head label{
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+.cf-complex__groups.ui-sortable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cf-complex__groups.ui-sortable .cf-complex__group {
+    flex-basis: 30%;
+    margin: 1%;
+}
+
+.cf-complex__group-body {
+    flex-direction: column;
+}
+
+.cf-field.cf-media-gallery .cf-field__body .cf-media-gallery__inner ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.cf-media-gallery__item-inner {
+    border: 1px solid #e2e4e7;
+    width: 100%;
+    height: 150px !important;
+    position: relative;
+    margin: 10px 0;
+}
+.cf-media-gallery__item-name {
+    position: absolute;
+    top: 10px;
+}
+
+.cf-complex__group-head {
+    position: relative;
+    display: flex;
+    border: 1px solid #e2e4e7;
+    border-bottom: 1px solid #e2e4e7 !important;
+    background-color: #fbfbfc;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #23282d;
+    cursor: move;
+    transition: border-color .1s linear;
+}
+
+.complex-column .cf-field__body .cf-complex__groups {
+    width: 100%;
+    flex-direction: column;
+}
+
+.complex-column .cf-field__head {
+    background: #efefef;
+    font-size: 20px;
+}
+.complex-column .cf-field__head label{
+    font-size:13px;
+}
+
+.block-counts {
+    background: #18223D;
+}
+.block-counts .cf-field__head{
+    background:transparent;
+}
+.block-counts .cf-field__head label{
+    color: #fff;
+}
+.block-counts .cf-field__body .cf-complex__groups .cf-complex__group .cf-complex__group-body .cf-field .cf-field__head label {
+    color: #000;
+}

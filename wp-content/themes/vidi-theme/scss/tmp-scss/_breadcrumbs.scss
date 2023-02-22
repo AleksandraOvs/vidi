@@ -1,0 +1,55 @@
+.breadcrumbs {
+  margin-bottom: 30px;
+  margin-top: 50px;
+
+  @include adpt ($tab-r) {
+    margin-top: 0;
+  }
+
+  @include adpt ($bmob-r) {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+      position: relative;
+
+      & a::after {
+        content: "/";
+      }
+    }
+
+    &:last-child {
+      & a {
+        opacity: 1;
+        pointer-events: none;
+      }
+    }
+
+    & a {
+      font-size: 20px;
+      line-height: 1 / 15;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+
+      @include adpt ($tab-r) {
+        font-size: 18px;
+      }
+
+      @include adpt ($bmob-r) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

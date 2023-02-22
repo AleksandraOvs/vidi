@@ -1,0 +1,102 @@
+.blog-page {
+  padding-bottom: 130px;
+
+  @include adpt ($bmob-r) {
+    padding-bottom: 80px;
+  }
+
+  &__date {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 100px;
+
+    @include adpt ($tab-r) {
+      font-size: 18px;
+      margin-bottom: 60px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 60px;
+
+    @include adpt ($desm-r) {
+      margin-bottom: 50px;
+    }
+  }
+
+  & h3 {
+    font-size: 30px;
+    line-height: 1.33;
+    margin-bottom: 30px;
+
+    @include adpt ($desm-r) {
+      font-size: 24px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 20px;
+    }
+  }
+
+  & img {
+    margin: 50px auto;
+    max-width: 560px;
+    width: 100%;
+    object-fit: contain;
+
+    @include adpt ($tab-r) {
+      margin: 30px auto;
+    }
+  }
+
+  & p {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include adpt ($tab-r) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  & ul:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include adpt ($tab-r) {
+      margin-bottom: 10px;
+    }
+  }
+
+  & li:not([class]) {
+    padding-left: 34px;
+    position: relative;
+
+    @include adpt ($bmob-r) {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      background-image: url('../images/icon/point.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 10px;
+      height: 13px;
+    }
+  }
+}

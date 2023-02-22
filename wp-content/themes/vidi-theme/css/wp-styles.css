@@ -1,0 +1,103 @@
+
+.blog-slider__img-wrap img {
+    object-fit: cover !important;
+}
+
+.blog-page__header .portfolio__link{
+    width:600px;
+    height:450px;
+    display:block;
+    margin: 0 auto;
+}
+
+.blog-page__header h2 {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.e404-container {
+    text-align: center;
+}
+
+.e404 {
+    font-size: 5em;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    color: #FE6A3C;
+}
+
+.e404-container a {
+    text-decoration: underline;
+    color: #FE6A3C;
+    margin-top:30px;
+}
+
+.e404-text {
+    margin-top:30px;
+    font-size: 1em;
+}
+
+.pop-up__input-line p {
+    display: flex;
+}
+.pop-up__input-line p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.pop-up__input-line p span{
+	display:block;
+    text-align: center;
+}
+.wpcf7-form-control-wrap {
+    width: 100%;
+}
+.pop-up__input-input {
+    width: 100%;
+    padding: 7px 20px;
+    font-size: 12px;
+    border: 1px solid #18223D;
+    border-radius: 5px;
+}
+
+.pop-up__input-line p>*:not(:last-child) {
+    margin-right: 18px;
+}
+
+span.page-numbers.current {
+    padding: 3px 9px;
+    border-radius: 3px;
+    display: block;
+    font-size: 14px;
+}
+.pagination__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.wpcf7-form p label {
+    opacity: 0.5;
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.wpcf7-list-item {
+    margin: 0;
+}
+
+.wpcf7-form .pop-up__btn {
+    margin-top: 30px;
+}

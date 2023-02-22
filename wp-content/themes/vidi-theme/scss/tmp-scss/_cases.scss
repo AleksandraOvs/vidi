@@ -1,0 +1,119 @@
+.cases {
+  &__inner {
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 65px 75px;
+
+    @include adpt ($tab-r) {
+      grid-gap: 45px 55px;
+    }
+
+    @include adpt ($bmob-r) {
+      display: none;
+    }
+  }
+
+  &__slide {
+    padding: 0 10px;
+  }
+
+  & .slick-list {
+    margin: 0 -10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    @include adpt ($bmob-r) {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__img-wrap {
+    margin-right: 30px;
+    flex-shrink: 0;
+
+    @include adpt ($tab-r) {
+      margin-right: 20px;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+
+    @include adpt ($tab-r) {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include adpt ($stab-r) {
+      height: 82px;
+      width: 82px;
+    }
+  }
+
+  &__content {
+    padding-top: 4px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    font-weight: 700;
+
+    @include adpt ($stab-r) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.4;
+    padding-left: 20px;
+
+    @include adpt ($tab-r) {
+      padding-left: 0;
+    }
+  }
+
+  &__slider-wrap {
+    display: none;
+
+    @include adpt ($bmob-r) {
+      display: block;
+    }
+  }
+
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    font-size: 0;
+
+    & li {
+      &.slick-active {
+        & button {
+          background-color: $accent;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    & button {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $default;
+      transition: background-color 0.3s;
+    }
+  }
+}
